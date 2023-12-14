@@ -29,3 +29,10 @@ if __name__ == '__main__':
     results = model.train(data='data.yaml', resume=True, epochs=100) #path for config file should be given
 
 ```
+## CODE :
+
+After training the model we will perform objection detection on the sample video for only vehicles like car, motorbike, bus, truck. Then we will keep track of those vehicle with car_ID. After that we will input the cropped image of vehicle to the license plate detection model. The util.py script contains ocr code for extracting the text of the license plate and to give us license plate confidence score. The complete results are created and saved in "test.csv" file. After that we will use add_missing_data script to modify the text.csv file to fill in the missing "frame_nmr" coloumn where no license plate was detected.
+
+
+
+
